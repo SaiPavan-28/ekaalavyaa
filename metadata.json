@@ -1,0 +1,6 @@
+{
+  "name": "Ekalavya Foundation Portal",
+  "description": "Comprehensive educational and higher-education opportunity portal for students, teachers, mentors, and administrators at Ekalavya Foundation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

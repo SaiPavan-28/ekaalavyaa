@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
+    --font-editorial: 'Newsreader', 'Lora', Georgia, serif;
+    --font-display: 'Cinzel', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1F1D1A;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom subtle editorial scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F4EFE7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D8CEBE;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #BEB09B;
+  }
+}
+
+.font-editorial {
+  font-family: 'Newsreader', 'Lora', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-serif {
+  font-family: 'Lora', Georgia, serif;
+}
+
