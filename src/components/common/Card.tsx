@@ -16,24 +16,24 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   const paddingStyles = {
     none: '',
-    sm: 'p-3.5 sm:p-4',
-    md: 'p-5 sm:p-6',
-    lg: 'p-6 sm:p-8',
+    sm: 'p-4 sm:p-5',
+    md: 'p-6 sm:p-7',
+    lg: 'p-8 sm:p-10',
   }[padding];
 
   const variantStyles = {
-    default: 'bg-white border border-[#E2DAC9] rounded-xs shadow-[0_1px_2px_rgba(28,25,23,0.03)]',
-    parchment: 'bg-[#FAF6EE] border border-[#E5DECf] rounded-xs',
-    outlined: 'bg-transparent border border-[#E2DAC9] rounded-xs',
-    forest: 'bg-[#162D22] border border-[#234535] text-[#FAF7F2] rounded-xs',
-    interactive: 'bg-white border border-[#E2DAC9] rounded-xs shadow-[0_1px_2px_rgba(28,25,23,0.03)] hover:border-[#BFAF98] hover:shadow-[0_2px_6px_rgba(28,25,23,0.06)] transition-all duration-150 cursor-pointer',
+    default: 'glass shadow-sm rounded-xl',
+    parchment: 'bg-white/60 backdrop-blur-md border border-white/40 rounded-xl shadow-sm',
+    outlined: 'bg-transparent border border-black/10 rounded-xl',
+    forest: 'bg-gradient-to-br from-[#1B382B]/90 to-[#234535]/90 backdrop-blur-md border border-white/10 text-white rounded-xl shadow-float',
+    interactive: 'glass shadow-sm rounded-xl hover:shadow-float hover:-translate-y-0.5 transition-all duration-300 cursor-pointer',
   }[variant];
 
   const accentStyles = {
     none: '',
-    terracotta: 'border-t-2 border-t-[#A8432B]',
-    forest: 'border-t-2 border-t-[#1B382B]',
-    mustard: 'border-t-2 border-t-[#C58F2C]',
+    terracotta: 'border-t-[3px] border-t-[#A8432B]',
+    forest: 'border-t-[3px] border-t-[#1B382B]',
+    mustard: 'border-t-[3px] border-t-[#C58F2C]',
   }[accentBorder];
 
   return (

@@ -27,42 +27,42 @@ export const StatCard: React.FC<StatCardProps> = ({
   return (
     <Card
       accentBorder={accent}
-      className="flex flex-col justify-between border-[#E2DAC9] bg-white p-4 sm:p-5 shadow-[0_1px_2px_rgba(28,25,23,0.03)]"
+      className="flex flex-col justify-between glass p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
     >
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
-          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#7C7467] block truncate">
+          <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#7C7467] block truncate">
             {label}
           </span>
-          <div className="mt-1.5 flex flex-wrap items-baseline gap-2">
-            <span className="text-2xl sm:text-3xl font-bold tracking-tight text-[#1F1D1A] font-serif">
+          <div className="mt-2 flex flex-wrap items-baseline gap-2.5">
+            <span className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1F1D1A] font-serif">
               {value}
             </span>
             {badge && (
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-[#F4EFE6] text-[#635746] border border-[#DDD3C2] whitespace-nowrap">
+              <span className="text-[10px] font-semibold px-2.5 py-1 rounded-md bg-white/60 text-[#635746] border border-black/5 whitespace-nowrap shadow-sm">
                 {badge}
               </span>
             )}
           </div>
         </div>
         {icon && (
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xs bg-[#FAF6EE] border border-[#E5DECf] flex items-center justify-center text-[#1B382B] flex-shrink-0">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/70 backdrop-blur-sm border border-white/50 flex items-center justify-center text-[#1B382B] flex-shrink-0 shadow-sm">
             {icon}
           </div>
         )}
       </div>
 
       {(subtitle || trend) && (
-        <div className="mt-3.5 pt-2.5 border-t border-[#F0EAE0] flex items-center justify-between gap-2 text-xs">
-          {subtitle && <span className="text-[#6E675D] truncate text-[11px] sm:text-xs">{subtitle}</span>}
+        <div className="mt-4 pt-3 border-t border-black/5 flex items-center justify-between gap-2 text-xs">
+          {subtitle && <span className="text-[#6E675D] truncate text-[11px] sm:text-xs font-medium">{subtitle}</span>}
           {trend && (
             <span
-              className={`font-semibold flex items-center gap-1 flex-shrink-0 text-[11px] sm:text-xs ${
+              className={`font-semibold flex items-center gap-1.5 flex-shrink-0 text-[11px] sm:text-xs px-2 py-0.5 rounded-md ${
                 trend.neutral
-                  ? 'text-[#5E584E]'
+                  ? 'bg-black/5 text-[#5E584E]'
                   : trend.isPositive
-                  ? 'text-[#1B382B]'
-                  : 'text-[#991B1B]'
+                  ? 'bg-[#1B382B]/10 text-[#1B382B]'
+                  : 'bg-[#991B1B]/10 text-[#991B1B]'
               }`}
             >
               {trend.value}
