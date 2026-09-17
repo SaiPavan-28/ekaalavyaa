@@ -12,6 +12,10 @@ import attendanceRoutes from './routes/attendanceRoutes';
 import assignmentRoutes from './routes/assignmentRoutes';
 import testRoutes from './routes/testRoutes';
 
+import mentorRoutes from './routes/mentorRoutes';
+import sessionRoutes from './routes/sessionRoutes';
+import recommendationRoutes from './routes/recommendationRoutes';
+
 const app = express();
 
 app.use(cors());
@@ -27,6 +31,10 @@ app.use('/api/teachers', authenticate, teacherRoutes);
 app.use('/api/teachers', authenticate, attendanceRoutes);
 app.use('/api/teachers', authenticate, assignmentRoutes);
 app.use('/api/teachers', authenticate, testRoutes);
+
+app.use('/api/mentors', authenticate, mentorRoutes);
+app.use('/api/mentors', authenticate, sessionRoutes);
+app.use('/api/mentors', authenticate, recommendationRoutes);
 
 // Centralized error handler
 app.use(errorHandler);

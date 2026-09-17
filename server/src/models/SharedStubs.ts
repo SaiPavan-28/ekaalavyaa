@@ -53,3 +53,9 @@ export interface IEnrollment extends Document {
   classId: mongoose.Types.ObjectId;
 }
 export const Enrollment = mongoose.model<IEnrollment>('Enrollment', new Schema({ studentId: Schema.Types.ObjectId, classId: Schema.Types.ObjectId }));
+
+// University Stub
+export interface IUniversity extends Document {
+  name: string;
+}
+export const University = mongoose.model<IUniversity>('University', new Schema({ name: String }));

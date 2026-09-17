@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import { Class, Enrollment } from '../models/SharedStubs';
 import { Attendance } from '../models/Attendance';
 import { AssignmentSubmission } from '../models/AssignmentSubmission';
-import { TestAttempt } from '../models/SharedStubs';
+import { TestAttempt } from '../models/TestAttempt';
 
 export const getClassAnalytics = async (teacherId: string, classId: string) => {
   const classDoc = await Class.findOne({ _id: classId, teacherId });
